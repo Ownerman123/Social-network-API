@@ -9,9 +9,9 @@ const userSchema = new mongoose.Schema({
         required: true, 
         match: [/^\S+@\S+\.\S+$/, 'Please fill a valid email address']
     },
-    thoughts: [{type:mongoose.Types.ObjectId, ref: "Thought", required: true}],
+    thoughts: [{type:mongoose.SchemaTypes.ObjectId, ref: "Thought", required: true}],
     friends: [{
-        type:mongoose.Types.ObjectId,
+        type:mongoose.SchemaTypes.ObjectId,
         ref: 'User'
     }],
     
